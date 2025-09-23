@@ -5,11 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Qr Code Generator</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Ubuntu&amp;display=swap"
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu&amp;display=swap"
     />
    <link rel="stylesheet" href="style.css" />
+   <!--Imports the QRCode.js library (a JavaScript library that generates QR codes).-->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   </head>
   <body>
@@ -18,12 +17,13 @@
         <h1>QR Code Generator</h1>
         <hr />
         <div class="sqrcode"></div>
+        <!--.qrcode is where the JavaScript library inserts the generated QR image.-->
         <div class="qrcode"></div>
         <input
           type="text"
           placeholder="Paste an URL or enter text, then press enter"
-          onchange="generateQr()"
-        />
+          onchange="generateQr()"/>
+          <button onclick="downloadQr()">Download QR Code</button>
       </div>
     </div>
     <script src="app.js"></script>
